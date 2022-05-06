@@ -1,458 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Red Flag Test</title>
-  </head>
+    <link rel="manifest" href="/site.webmanifest" /> -->
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 
-    body {
-      font-family: "Comic Neue";
-      font-weight: bold;
-      background-color: #ffc600;
-      display: grid;
-      align-content: center;
-      justify-content: center;
-      word-break: keep-all;
-      position: relative;
-      margin: 10px;
-      padding: 10px;
-    }
-    .box {
-      background-color: white;
-      width: fit-content;
-      max-width: 600px;
-      position: relative;
-      border-radius: 5px;
-      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-      padding: 15px;
-      margin: 5px;
-    }
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Red Flag Test</title>
+</head>
 
-    .box-a {
-      background-color: white;
-      width: fit-content;
-      max-width: 60%;
-      position: relative;
-      border-radius: 5px;
-      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-      padding: 10px;
-      margin: 10px 5px;
-    }
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-    .line-bottom {
-      border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-      width: 100%;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-    }
-    .line-top {
-      border-top: 1px solid rgba(128, 128, 128, 0.5);
-      width: 100%;
-      margin-top: 10px;
-      padding-top: 10px;
-    }
+  body {
+    font-family: "Comic Neue";
+    font-weight: bold;
+    background-color: #ffc600;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    word-break: keep-all;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+  }
 
-    #text {
-      text-align: center;
-      font-size: 1.8em;
-    }
-    label {
-      font-size: 1.3em;
-      margin: 10px;
-      width: max-content;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      border-radius: 7px;
-      padding: 2px;
-    }
-    a:hover {
-      background-color: rgb(0, 0, 0);
-      color: white;
-    }
-    #pe {
-      font-size: 1.3em;
-    }
-  </style>
-  <body>
-    <header>
-      <div class="box-a" id="pe">
-        Esse é um teste que mede o seu nível de ações questionáveis!
+  .box {
+    background-color: white;
+    width: fit-content;
+    max-width: 600px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .box-a {
+    background-color: white;
+    width: fit-content;
+    max-width: 60%;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 10px 5px;
+  }
+
+  .line-bottom {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .line-top {
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  #text {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  label {
+    font-size: 1.3em;
+    margin: 10px;
+    width: max-content;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 2px;
+  }
+
+  a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  #pe {
+    font-size: 1.3em;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="box-a" id="pe">
+      Esse é um teste que mede o seu nível de ações questionáveis!
+    </div>
+  </header>
+
+  <section>
+    <div class="box">
+      <div class="line-bottom" id="text">The Red Flag List!</div>
+
+      <label><input type="checkbox" value="200" onclick="UC(this)" />se identifica com o ryan gosling</label><br />
+      <label><input type="checkbox" value="150" onclick="UC(this)" />não gosta de gatos</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />é fã de weezer</label><br />
+      <label><input type="checkbox" value="400" onclick="UC(this)" />é nice guy</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />coleciona funko pop</label><br />
+      <label><input type="checkbox" value="50" onclick="UC(this)" />faz chart semanalmente no last.fm</label><br />
+      <label><input type="checkbox" value="1000" onclick="UC(this)" />ageplayer</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />é branco e usa dread</label><br />
+      <label><input type="checkbox" value="800" onclick="UC(this)" />usa whatsapp gb</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />se identifica com o joker</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />não-negro que faz piada com n-word</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />loiro natural</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />incel/femcel</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />crypto bro</label><br />
+      <label><input type="checkbox" value="50" onclick="UC(this)" />começou a fumar coincidentemente após assistir
+        cowboy bebop, euphoria ou skins</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />não usa mais máscara</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />se identifica com o bo burnham</label><br />
+      <label><input type="checkbox" value="200" onclick="UC(this)" />usa letterboxd</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />faz elitismo acadêmico</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />surta ao jogar/falar de lol</label><br />
+      <label><input type="checkbox" value="75" onclick="UC(this)" />não sabe temperar carne/acha que é só sobre sal e
+        pimenta</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />fã de sewerslvt</label><br />
+      <label><input type="checkbox" value="150" onclick="UC(this)" />branco com tatuagem tribal</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />burguês</label><br />
+      <label><input type="checkbox" value="200" onclick="UC(this)" />mistura português com inglês</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />fã de pewdiepie</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />faz gatekeeping</label><br />
+      <label><input type="checkbox" value="200" onclick="UC(this)" />pega uber black</label><br />
+      <label><input type="checkbox" value="100" onclick="UC(this)" />tem uma lista de redflags</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />acha que fã é dono da obra</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />fã do tarantino</label><br />
+      <label><input type="checkbox" value="10" onclick="UC(this)" />se chama caio/joão/pedro</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />gosta da hq de the boys</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />AINDA usa myanimelist</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />usa snapchat</label><br />
+      <label><input type="checkbox" value="50" onclick="UC(this)" />acha o superman chato</label><br />
+      <label><input type="checkbox" value="350" onclick="UC(this)" />diz que vai votar nulo neste ano</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />é católico apostólico romano</label><br />
+      <label><input type="checkbox" value="700" onclick="UC(this)" />defende ceo</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />é fã do luba</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />defende o griffth ironicamente</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />tem como anime favorito um hentai</label><br />
+      <label><input type="checkbox" value="100" onclick="UC(this)" />faz kinkshaming</label><br />
+      <label><input type="checkbox" value="400" onclick="UC(this)" />não gostar de grant morrison</label><br />
+      <label><input type="checkbox" value="600" onclick="UC(this)" />harry styles</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />tem como marido qualquer boneco de
+        snk</label><br />
+      <label><input type="checkbox" value="100" onclick="UC(this)" />fala poggers não ironicamente</label><br />
+      <label><input type="checkbox" value="400" onclick="UC(this)" />fâ de one piece</label><br />
+      <label><input type="checkbox" value="750" onclick="UC(this)" />romantiza serial killer</label><br />
+      <label><input type="checkbox" value="150" onclick="UC(this)" />não gosta de cachorro</label><br />
+      <label><input type="checkbox" value="400" onclick="UC(this)" />ancap</label><br />
+      <label><input type="checkbox" value="100" onclick="UC(this)" />faz referência pra jojo/evangelion
+        constantemente</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />é contra modo fácil em videojogos</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />tem olho claro</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />interrompe pessoas constantemente</label><br />
+      <label><input type="checkbox" value="250" onclick="UC(this)" />zoa pisskink mas bebe cerveja</label><br />
+      <label><input type="checkbox" value="200" onclick="UC(this)" />é invejosa</label><br />
+      <label><input type="checkbox" value="800" onclick="UC(this)" />se auto declara potterhead</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />ruivo natural fiscal de ruivo</label><br />
+      <label><input type="checkbox" value="80" onclick="UC(this)" />gosta de sertanejo universitário</label><br />
+      <label><input type="checkbox" value="1000" onclick="UC(this)" />faz relações internacionais no rio de janeiro
+        morou em fundão tem os olhos azuis e 187cm de altura</label><br />
+      <label><input type="checkbox" value="100" onclick="UC(this)" />litrão boleto coxinha</label><br />
+      <label><input type="checkbox" value="200" onclick="UC(this)" />usa muito meme de american psycho</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />é fã maluco do zack snyder</label><br />
+      <label><input type="checkbox" value="300" onclick="UC(this)" />usa normie como insulto</label><br />
+      <label><input type="checkbox" value="500" onclick="UC(this)" />usa facebook</label><br />
+      <label><input type="checkbox" value="700" onclick="UC(this)" />chama toda ex de maluca</label><br />
+      <label><input type="checkbox" value="1000" onclick="UC(this)" />defende o griffth NÃO ironicamente</label><br />
+
+      <div class="line-top" id="text">
+        <div id="total"></div>
+        <div id="ver"></div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section>
-      <div class="box">
-        <div class="line-bottom" id="text">The Red Flag List!</div>
+  <footer>
+    <div class="box-a" id="pe">
+      desenvolvido por
+      <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na
+      infame lista de red flags de
+      <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.
+    </div>
+  </footer>
+  <script>
+    const resultado = document.querySelector("#total");
+    const veredito = document.querySelector("#ver");
+    const final = document.querySelector("#show");
 
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />se identifica
-          com o ryan gosling</label
-        ><br />
+    var total = 0;
 
-        <label
-          ><input type="checkbox" value="150" onclick="UC(this)" />não gosta de
-          gatos</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />é fã de
-          weezer</label
-        ><br />
-        <label
-          ><input type="checkbox" value="400" onclick="UC(this)" />é nice
-          guy</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />coleciona
-          funko pop</label
-        ><br />
-        <label
-          ><input type="checkbox" value="50" onclick="UC(this)" />faz chart
-          semanalmente no last.fm</label
-        ><br />
-        <label
-          ><input
-            type="checkbox"
-            value="1000"
-            onclick="UC(this)"
-          />ageplayer</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />é branco e
-          usa dread</label
-        ><br />
-        <label
-          ><input type="checkbox" value="800" onclick="UC(this)" />usa whatsapp
-          gb</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />se identifica
-          com o joker</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />não-negro que
-          faz piada com n-word</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />loiro
-          natural</label
-        ><br />
-        <label
-          ><input
-            type="checkbox"
-            value="250"
-            onclick="UC(this)"
-          />incel/femcel</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />crypto
-          bro</label
-        ><br />
-        <label
-          ><input type="checkbox" value="50" onclick="UC(this)" />começou a
-          fumar coincidentemente após assistir cowboy bebop, euphoria ou
-          skins</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />não usa mais
-          máscara</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />se identifica
-          com o bo burnham</label
-        ><br />
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />usa
-          letterboxd</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />faz elitismo
-          acadêmico</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />surta ao
-          jogar/falar de lol</label
-        ><br />
-        <label
-          ><input type="checkbox" value="75" onclick="UC(this)" />não sabe
-          temperar carne/acha que é só sobre sal e pimenta</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />fã de
-          sewerslvt</label
-        ><br />
-        <label
-          ><input type="checkbox" value="150" onclick="UC(this)" />branco com
-          tatuagem tribal</label
-        ><br />
-        <label
-          ><input
-            type="checkbox"
-            value="250"
-            onclick="UC(this)"
-          />burguês</label
-        ><br />
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />mistura
-          português com inglês</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />fã de
-          pewdiepie</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />faz
-          gatekeeping</label
-        ><br />
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />pega uber
-          black</label
-        ><br />
-        <label
-          ><input type="checkbox" value="100" onclick="UC(this)" />tem uma lista
-          de redflags</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />acha que fã é
-          dono da obra</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />fã do
-          tarantino</label
-        ><br />
-        <label
-          ><input type="checkbox" value="10" onclick="UC(this)" />se chama
-          caio/joão/pedro</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />gosta da hq
-          de the boys</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />AINDA usa
-          myanimelist</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />usa
-          snapchat</label
-        ><br />
-        <label
-          ><input type="checkbox" value="50" onclick="UC(this)" />acha o
-          superman chato</label
-        ><br />
-        <label
-          ><input type="checkbox" value="350" onclick="UC(this)" />diz que vai
-          votar nulo</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />é católico
-          apostólico romano</label
-        ><br />
-        <label
-          ><input type="checkbox" value="700" onclick="UC(this)" />defende
-          ceo</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />é fã do
-          luba</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />defende o
-          griffth ironicamente</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />tem como
-          anime favorito um hentai</label
-        ><br />
-        <label
-          ><input type="checkbox" value="100" onclick="UC(this)" />faz
-          kinkshaming</label
-        ><br />
-        <label
-          ><input type="checkbox" value="400" onclick="UC(this)" />não gostar de
-          grant morrison</label
-        ><br />
-        <label
-          ><input type="checkbox" value="600" onclick="UC(this)" />harry
-          styles</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />tem como
-          marido qualquer boneco de snk</label
-        ><br />
-        <label
-          ><input type="checkbox" value="100" onclick="UC(this)" />fala poggers
-          não ironicamente</label
-        ><br />
-        <label
-          ><input type="checkbox" value="400" onclick="UC(this)" />fâ de one
-          piece</label
-        ><br />
-        <label
-          ><input type="checkbox" value="750" onclick="UC(this)" />romantiza
-          serial killer</label
-        ><br />
-        <label
-          ><input type="checkbox" value="150" onclick="UC(this)" />não gosta de
-          cachorro</label
-        ><br />
-        <label
-          ><input type="checkbox" value="400" onclick="UC(this)" />ancap</label
-        ><br />
-        <label
-          ><input type="checkbox" value="100" onclick="UC(this)" />faz
-          referência pra jojo/evangelion constantemente</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />é contra modo
-          fácil em videojogos</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />tem olho
-          claro</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />interrompe
-          pessoas constantemente</label
-        ><br />
-        <label
-          ><input type="checkbox" value="250" onclick="UC(this)" />zoa pisskink
-          mas bebe cerveja</label
-        ><br />
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />é
-          invejosa</label
-        ><br />
-        <label
-          ><input type="checkbox" value="800" onclick="UC(this)" />se auto
-          declara potterhead</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />ruivo natural
-          fiscal de ruivo</label
-        ><br />
-        <label
-          ><input type="checkbox" value="80" onclick="UC(this)" />gosta de
-          sertanejo universitário</label
-        ><br />
-        <label
-          ><input type="checkbox" value="1000" onclick="UC(this)" />faz relações
-          internacionais no rio de janeiro morou em fundão tem os olhos azuis e
-          187cm de altura</label
-        ><br />
-        <label
-          ><input type="checkbox" value="100" onclick="UC(this)" />litrão boleto
-          coxinha</label
-        ><br />
-        <label
-          ><input type="checkbox" value="200" onclick="UC(this)" />usa muito
-          meme de american psycho</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />é fã maluco
-          do zack snyder</label
-        ><br />
-        <label
-          ><input type="checkbox" value="300" onclick="UC(this)" />usa normie
-          como insulto</label
-        ><br />
-        <label
-          ><input type="checkbox" value="500" onclick="UC(this)" />usa
-          facebook</label
-        ><br />
-        <label
-          ><input type="checkbox" value="700" onclick="UC(this)" />chama toda ex
-          de maluca</label
-        ><br />
-        <label
-          ><input type="checkbox" value="1000" onclick="UC(this)" />defende o
-          griffth NÃO ironicamente</label
-        ><br />
-
-        <div class="line-top" id="text">
-          <div id="total"></div>
-          <div id="ver"></div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="box-a" id="pe">
-        desenvolvido por
-        <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na
-        infame lista de red flags de
-        <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.
-      </div>
-    </footer>
-    <script>
-      const resultado = document.querySelector("#total");
-      const veredito = document.querySelector("#ver");
-      const final = document.querySelector("#show");
-
-      var total = 0;
-
-      function UC(elem) {
-        if (elem.checked == true) {
-          total += Number(elem.value);
-        } else {
-          total -= Number(elem.value);
-        }
-
-        resultado.textContent = total.toFixed(0);
-
-        if (elem.checked == false) {
-          veredito.textContent = "";
-        }
-
-        if (total < 0) {
-          resultado.textContent = 0;
-        }
-
-        if (total >= 1 && total <= 500) {
-          veredito.textContent = "Você é apenas meio bobo.";
-        }
-
-        if (total >= 501 && total <= 2000) {
-          veredito.textContent = "Tem que ver isso aí, hein...";
-        }
-
-        if (total >= 2001 && total <= 5000) {
-          veredito.textContent = "Tu é meio esquisito...";
-        }
-
-        if (total >= 5001 && total <= 8000) {
-          veredito.textContent = "Quase uma ameaça.";
-        }
-
-        if (total >= 8001 && total <= 10000) {
-          veredito.textContent = "ce fei zé se endireita";
-        }
-
-        if (total >= 10001 && total <= 15000) {
-          veredito.textContent = "ninguém é tão desgraçado assim";
-        }
-
-        if (total >= 15001) {
-          veredito.textContent = "vai se foder toma no cu porra desgraça";
-        }
+    function UC(elem) {
+      if (elem.checked == true) {
+        total += Number(elem.value);
+      } else {
+        total -= Number(elem.value);
       }
 
-      resultado.textContent = total;
+      resultado.textContent = total.toFixed(0);
 
-      function sh() {
-        final.style.opacity = 1;
+      if (elem.checked == false) {
+        veredito.textContent = "";
       }
-    </script>
-  </body>
+
+      if (total < 0) {
+        resultado.textContent = 0;
+      }
+
+      if (total >= 1 && total <= 500) {
+        veredito.textContent = "Você é apenas meio bobo.";
+      }
+
+      if (total >= 501 && total <= 2000) {
+        veredito.textContent = "Tem que ver isso aí, hein...";
+      }
+
+      if (total >= 2001 && total <= 5000) {
+        veredito.textContent = "Tu é meio esquisito...";
+      }
+
+      if (total >= 5001 && total <= 8000) {
+        veredito.textContent = "Quase uma ameaça.";
+      }
+
+      if (total >= 8001 && total <= 10000) {
+        veredito.textContent = "ce fei zé se endireita";
+      }
+
+      if (total >= 10001 && total <= 15000) {
+        veredito.textContent = "ninguém é tão desgraçado assim";
+      }
+
+      if (total >= 15001) {
+        veredito.textContent = "vai se foder toma no cu porra desgraça";
+      }
+    }
+
+    resultado.textContent = total;
+
+    function sh() {
+      final.style.opacity = 1;
+    }
+  </script>
+</body>
+
 </html>
