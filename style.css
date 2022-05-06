@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+body {
+  font-family: "Comic Neue";
+  font-weight: bold;
+  background-color: #ffc600;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  word-break: keep-all;
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+.box {
+  background-color: white;
+  width: fit-content;
+  max-width: 600px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  margin: 5px;
+}
+
+.box-a {
+  background-color: white;
+  width: fit-content;
+  max-width: 60%;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 10px 5px;
+}
+
+.line-bottom {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.line-top {
+  border-top: 1px solid rgba(128, 128, 128, 0.5);
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#text {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+label {
+  font-size: 1.3em;
+  margin: 10px;
+  width: max-content;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 2px;
+}
+
+a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#pe {
+  font-size: 1.3em;
+}
