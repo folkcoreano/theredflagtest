@@ -1,6 +1,8 @@
 const resultado = document.querySelector("#total");
 const veredito = document.querySelector("#ver");
+const obs = document.querySelector("#obs");
 const final = document.querySelector("#show");
+const face = document.querySelector("#fb");
 
 var total = 0;
 
@@ -19,6 +21,12 @@ function UC(elem) {
 
   if (total < 0) {
     resultado.textContent = 0;
+  }
+
+  if (face.checked == true) {
+    obs.textContent = `also, no bitches?`;
+  } else {
+    obs.textContent = "";
   }
 
   if (total >= 1 && total <= 500) {
@@ -51,7 +59,3 @@ function UC(elem) {
 }
 
 resultado.textContent = total;
-
-function sh() {
-  final.style.opacity = 1;
-}
