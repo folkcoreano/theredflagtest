@@ -1,4 +1,4 @@
-# The Red Flag List
+# The Red Flag Test
 
 Um site que mede o seu nível de _filhadaputagem_.
 
