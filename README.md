@@ -2,7 +2,7 @@
 
 Um site que mede o seu nível de _filhadaputagem_.
 
-Acesse: [The Red Flag Test](https://folkcoreano.github.io/theredflaglist/).
+Acesse: [The Red Flag Test](https://folkcoreano.github.io/theredflagtest/).
 
 Agora também no Netlify! [The Red Flag Test](https://theredflagtest.netlify.app/).
 
