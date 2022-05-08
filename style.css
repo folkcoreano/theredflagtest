@@ -3,7 +3,7 @@
 body {
   font-family: "Comic Neue";
   font-weight: bold;
-  background-color: #ffc600;
+  background-color: hsl(47, 100%, 50%);
   display: grid;
   align-content: center;
   justify-content: center;
@@ -13,12 +13,12 @@ body {
 }
 
 .box {
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   width: fit-content;
   max-width: 600px;
   position: relative;
   border-radius: 5px;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0px hsla(0, 0%, 0%, 0.3);
   padding: 15px;
   margin: 5px;
   word-break: normal;
@@ -26,25 +26,25 @@ body {
 }
 
 .box-a {
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   width: fit-content;
   max-width: 60%;
   position: relative;
   border-radius: 5px;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0px hsla(0, 0%, 0%, 0.3);
   padding: 10px;
   margin: 10px 5px;
 }
 
 .line-bottom {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  border-bottom: 1px solid hsla(0, 0%, 50%, 0.5);
   width: 100%;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
 .line-top {
-  border-top: 1px solid rgba(128, 128, 128, 0.5);
+  border-top: 1px solid hsla(0, 0%, 50%, 0.5);
   width: 100%;
   margin-top: 10px;
   padding-top: 10px;
@@ -73,8 +73,8 @@ a {
 }
 
 a:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
 }
 
 #pe {
@@ -83,6 +83,8 @@ a:hover {
 
 .cb {
   appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .container {
@@ -94,7 +96,7 @@ a:hover {
   cursor: pointer;
   width: 2.2em;
   height: 2.2em;
-  border: 0.275em solid rgb(0, 0, 0);
+  border: 0.275em solid hsl(0, 0%, 0%);
   border-radius: 5px;
   aspect-ratio: 1 / 1;
   display: flex;
@@ -107,4 +109,41 @@ a:hover {
 .cb:checked::after {
   content: "\1F480";
   font-size: 1.3em;
+}
+
+button {
+  font-family: "Comic Neue";
+  border: none;
+  border-radius: 0.75em;
+  background: hsl(0, 0%, 0%);
+  margin: 0.5em;
+  padding: 0.0em;
+  transition: transform 0.1s ease;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 1.7em;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 0.5em;
+  padding: 0.5em 1.5em;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button {
+  transform: translateY(-0.33em);
+}
+
+button:active .button {
+  transform: translateY(0);
+}
+
+#show {
+  display: none;
+  transition: transform 0.1s ease;
 }

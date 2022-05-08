@@ -3,6 +3,12 @@ const veredito = document.querySelector("#ver");
 const obs = document.querySelector("#obs");
 const final = document.querySelector("#show");
 const face = document.querySelector("#fb");
+const btn = document.querySelector("#btn");
+
+function show() {
+  final.style.display = "block";
+  btn.style.display = "none";
+}
 
 var total = 0;
 
