@@ -7,7 +7,6 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
-  word-break: keep-all;
   position: relative;
   margin: 10px;
   padding: 10px;
@@ -22,6 +21,8 @@ body {
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
   padding: 15px;
   margin: 5px;
+  word-break: normal;
+  word-wrap: normal;
 }
 
 .box-a {
@@ -56,9 +57,13 @@ body {
 
 label {
   font-size: 1.3em;
-  margin: 10px;
-  width: max-content;
-  line-height: 1.6;
+  max-width: max-content;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 2px;
+  padding: 2px;
 }
 
 a {
@@ -73,5 +78,33 @@ a:hover {
 }
 
 #pe {
+  font-size: 1.3em;
+}
+
+.cb {
+  appearance: none;
+}
+
+.container {
+  display: block;
+  align-items: center;
+}
+
+.cb {
+  cursor: pointer;
+  width: 2.2em;
+  height: 2.2em;
+  border: 0.275em solid rgb(0, 0, 0);
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.cb:checked::after {
+  content: "\1F480";
   font-size: 1.3em;
 }
