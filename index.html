@@ -40,6 +40,7 @@
           <div id="total"></div>
           <div id="ver"></div>
           <div id="obs"></div>
+          <div id="check"></div>
           </p>
 
           <button onclick="window.location.href=window.location.href">
@@ -57,7 +58,7 @@
     <div class="box-a" id="pe">
       desenvolvido por
       <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na
-      infame lista de red flags de
+      infame lista de redflags de
       <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.
     </div>
   </footer>
@@ -66,7 +67,7 @@
     const item = document.querySelector(".container");
 
     for (i = 0; i < redflags.length; i++) {
-      item.innerHTML += `<label><input class="cb" type="checkbox" id="${redflags[i].id}" value="${redflags[i].valor}" onclick="UC(this)">${redflags[i].flag}</label><br />`;
+      item.innerHTML += `<label><input class="cb select" type="checkbox" id="${redflags[i].id}" value="${redflags[i].valor}" onclick="UC(this)">${redflags[i].flag}</label><br />`;
     }
   </script>
 </body>

@@ -235,6 +235,11 @@ const redflags = [
     id: "",
   },
   {
+    flag: "brinca que seu parceiro romântico é seu pai/mãe",
+    valor: "0500",
+    id: "",
+  },
+  {
     flag: "não gosta de sapos",
     valor: "0400",
     id: "",

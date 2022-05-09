@@ -4,6 +4,8 @@ const obs = document.querySelector("#obs");
 const final = document.querySelector("#show");
 const face = document.querySelector("#fb");
 const btn = document.querySelector("#btn");
+const checkboxes = document.querySelectorAll("cb");
+const check = document.querySelector("#check");
 
 function show() {
   final.style.display = "block";
@@ -19,7 +21,13 @@ function UC(elem) {
     total -= Number(elem.value);
   }
 
-  resultado.textContent = total.toFixed(0);
+  const allbox = document.querySelectorAll('input[type="checkbox"]');
+
+  const chebox = document.querySelectorAll('input[type="checkbox"]:checked');
+
+  check.textContent = `Você marcou ${chebox.length} de ${allbox.length} items da lista.`;
+
+  resultado.textContent = `${total.toFixed(0)} pontos.`;
 
   if (elem.checked == false) {
     veredito.textContent = "";
@@ -64,4 +72,4 @@ function UC(elem) {
   }
 }
 
-resultado.textContent = total;
+resultado.textContent = "Parabéns! Você não marcou nada.";
