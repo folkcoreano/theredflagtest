@@ -47,28 +47,56 @@ function UC(elem) {
     veredito.textContent = "Você é apenas meio bobo.";
   }
 
-  if (total >= 501 && total <= 2000) {
+  if (total >= 501 && total <= 1000) {
+    veredito.textContent = "Não se preocupe, poderia ser pior!";
+  }
+
+  if (total >= 1001 && total <= 2000) {
+    veredito.textContent = "Dá pra resolver, ainda há tempo.";
+  }
+
+  if (total >= 2001 && total <= 3000) {
+    veredito.textContent = "Não é tão ruim assim, vai.";
+  }
+
+  if (total >= 3001 && total <= 4000) {
+    veredito.textContent = "Preocupante mas nem tanto!";
+  }
+
+  if (total >= 4001 && total <= 5000) {
     veredito.textContent = "Tem que ver isso aí, hein...";
   }
 
-  if (total >= 2001 && total <= 5000) {
-    veredito.textContent = "Tu é meio esquisito...";
-  }
-
-  if (total >= 5001 && total <= 8000) {
+  if (total >= 5001 && total <= 6000) {
     veredito.textContent = "Quase uma ameaça.";
   }
 
-  if (total >= 8001 && total <= 10000) {
+  if (total >= 6001 && total <= 7000) {
+    veredito.textContent = "Tu é meio esquisito...";
+  }
+
+  if (total >= 7001 && total <= 8000) {
+    veredito.textContent = "Já pode ir tomando vergonha na cara.";
+  }
+
+  if (total >= 8001 && total <= 9000) {
+    veredito.textContent = "Não dá pra te defender.";
+  }
+
+  if (total >= 9001 && total <= 10000) {
+    veredito.textContent = "cê acha isso bonito? te orienta";
+  }
+
+  if (total >= 10001 && total <= 11000) {
     veredito.textContent = "ce fei zé se endireita";
   }
 
-  if (total >= 10001 && total <= 15000) {
-    veredito.textContent = "ninguém é tão desgraçado assim";
+  if (total >= 11001 && total <= 15000) {
+    veredito.textContent = "Procure um advogado.";
   }
 
   if (total >= 15001) {
-    veredito.textContent = "vai se foder toma no cu porra desgraça";
+    veredito.textContent = "Talvez você precise de um grupo de advogados.";
   }
 }
 

@@ -155,8 +155,8 @@ const redflags = [
     id: "",
   },
   {
-    flag: "se chama caio/joão/pedro",
-    valor: "0010",
+    flag: "se chama caio/joão/pedro/enzo",
+    valor: "0050",
     id: "",
   },
   {
@@ -315,6 +315,11 @@ const redflags = [
     id: "",
   },
   {
+    flag: "sabe desenhar",
+    valor: "0300",
+    id: "",
+  },
+  {
     flag: "gosta de sertanejo universitário",
     valor: "0100",
     id: "",
@@ -322,6 +327,11 @@ const redflags = [
   {
     flag: "litrão boleto coxinha",
     valor: "0100",
+    id: "",
+  },
+  {
+    flag: "sabe desenhar nsfw",
+    valor: "0250",
     id: "",
   },
   {
