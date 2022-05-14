@@ -1,11 +1,42 @@
+const ui = [
+  {
+    header:
+      "Um teste nada sério que mede o quão questionável podem ser suas ações!",
+    footer: `<div class="box-a" id="pe">
+      desenvolvido por
+      <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na
+      infame lista de redflags de
+      <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.
+    </div>`,
+    results: "mostrar resultado",
+    redo: "refazer",
+  },
+  {
+    header:
+      "¡Una prueba no tan seria que mide qué tan cuestionables pueden ser tus acciones!",
+    footer: "",
+    results: "mostrar resultado",
+    redo: "rehacer",
+  },
+  {
+    header:
+      "A not-so-serious test that measures how questionable your actions can be!",
+    footer: "",
+    results: "show results",
+    redo: "redo",
+  },
+];
+
 const redflags = [
   {
     flag: "se identifica com o ryan gosling",
+    flag_en: "identifies with ryan gosling",
     valor: "0200",
     id: "rg",
   },
   {
     flag: "não gosta de gatos",
+    flag_en: "doesn't like cats",
     valor: "0150",
     id: "",
   },
@@ -255,7 +286,7 @@ const redflags = [
     id: "",
   },
   {
-    flag: "fâ de one piece",
+    flag: "fã de one piece",
     valor: "0300",
     id: "",
   },

@@ -4,36 +4,44 @@ body {
   font-family: "Comic Neue";
   font-weight: bold;
   background-color: hsl(47, 100%, 50%);
-  display: grid;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center;
   margin: 5px;
   padding: 5px;
 }
 
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px;
+}
+
 .box {
   background-color: hsl(0, 0%, 100%);
+  min-width: 450px;
   width: fit-content;
   max-width: 600px;
   position: relative;
   border-radius: 5px;
   box-shadow: 10px 10px 0px hsla(0, 0%, 0%, 0.3);
   padding: 15px;
-  margin: 5px;
   word-break: normal;
   word-wrap: normal;
+  margin: 18px 0px;
 }
 
 .box-a {
   background-color: hsl(0, 0%, 100%);
   width: fit-content;
-  max-width: 60%;
-  position: relative;
+  max-width: 450px;
+  font-size: 1.3em;
   border-radius: 5px;
   box-shadow: 10px 10px 0px hsla(0, 0%, 0%, 0.3);
-  padding: 10px;
-  margin: 10px 5px;
+  padding: 15px;
 }
 
 .line-bottom {
@@ -41,6 +49,9 @@ body {
   width: 100%;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .line-top {
@@ -62,8 +73,6 @@ label {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  margin: 2px;
-  padding: 2px;
 }
 
 a {
@@ -123,7 +132,12 @@ button {
   margin: 0.5em;
   padding: 0.0em;
   transition: transform 0.1s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 
 .button {
   font-weight: bold;
@@ -157,4 +171,42 @@ button:active .button {
 #obs,
 #check {
   margin: 0.3em;
+}
+
+.select {
+  margin: 0.5em 0.5em;
+}
+
+input {
+  cursor: pointer;
+}
+
+.radio {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 0.3em;
+  border: 0.111em solid black;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__label {
+  padding: 0.1em 0.2em;
+  font-size: 0.8em;
+  color: #000000;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 250ms;
+  user-select: none;
+}
+
+.radio__label:not(:last-of-type) {
+  border-right: 0.145em solid #000000;
+}
+
+.radio__input:checked+.radio__label {
+  color: #ffffff;
+  background: #000000;
 }
