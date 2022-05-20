@@ -9,10 +9,11 @@ const item = document.querySelector(".container");
 const head = document.querySelector("#head");
 const butres = document.querySelector("#butres");
 const butred = document.querySelector("#butred");
+const ch = document.querySelector("#ch");
 
-let ptl = document.querySelector("#pt");
-let esl = document.querySelector("#es");
-let enl = document.querySelector("#en");
+var ptl = document.querySelector("#pt");
+var esl = document.querySelector("#es");
+var enl = document.querySelector("#en");
 
 const ui = [
   {
@@ -438,108 +439,102 @@ function UC(elem) {
     total -= Number(elem.value);
   }
 
-  const resultexts = {
-    nb: "nunca viu um peitinho, né?",
-  };
-
   const allbox = document.querySelectorAll('input[type="checkbox"]');
   const chebox = document.querySelectorAll('input[type="checkbox"]:checked');
 
   const face = document.querySelector("#fb");
 
-  var nbt = resultexts.nb;
-
-  face.checked == true ? (obs.textContent = nbt) : (obs.textContent = ``);
+  face.checked
+    ? (obs.textContent = "nunca viu um peitinho, né?")
+    : (obs.textContent = "");
 
   check.textContent = `Você marcou ${chebox.length} de ${allbox.length} items da lista.`;
 
+  total == 0 ? (ch.textContent = comms.def) : (ch.textContent = "");
+
   resultado.textContent = `${total.toFixed(0)} pontos.`;
 
-  if (elem.checked == false) {
-    veredito.textContent = "";
-  }
+  elem.checked ? "" : (veredito.textContent = "");
 
-  if (total < 0) {
-    resultado.textContent = 0;
-  }
+  total > 1 && total < 500
+    ? (veredito.textContent = "Você é apenas meio bobo.")
+    : "";
 
-  if (total >= 1 && total <= 500) {
-    veredito.textContent = "Você é apenas meio bobo.";
-  }
+  total >= 501 && total <= 1000
+    ? (veredito.textContent = "Não se preocupe, poderia ser pior!")
+    : "";
 
-  if (total >= 501 && total <= 1000) {
-    veredito.textContent = "Não se preocupe, poderia ser pior!";
-  }
+  total >= 1001 && total <= 2000
+    ? (veredito.textContent = "Dá pra resolver, ainda há tempo.")
+    : "";
 
-  if (total >= 1001 && total <= 2000) {
-    veredito.textContent = "Dá pra resolver, ainda há tempo.";
-  }
+  total >= 2001 && total <= 3000
+    ? (veredito.textContent = "Não é tão ruim assim, vai.")
+    : "";
 
-  if (total >= 2001 && total <= 3000) {
-    veredito.textContent = "Não é tão ruim assim, vai.";
-  }
+  total >= 3001 && total <= 4000
+    ? (veredito.textContent = "Preocupante mas nem tanto!")
+    : "";
 
-  if (total >= 3001 && total <= 4000) {
-    veredito.textContent = "Preocupante mas nem tanto!";
-  }
+  total >= 4001 && total <= 5000
+    ? (veredito.textContent = "Tem que ver isso aí, hein...")
+    : "";
 
-  if (total >= 4001 && total <= 5000) {
-    veredito.textContent = "Tem que ver isso aí, hein...";
-  }
+  total >= 5001 && total <= 6000
+    ? (veredito.textContent = "Quase uma ameaça.")
+    : "";
 
-  if (total >= 5001 && total <= 6000) {
-    veredito.textContent = "Quase uma ameaça.";
-  }
+  total >= 6001 && total <= 7000
+    ? (veredito.textContent = "Tu é meio esquisito...")
+    : "";
 
-  if (total >= 6001 && total <= 7000) {
-    veredito.textContent = "Tu é meio esquisito...";
-  }
+  total >= 7001 && total <= 8000
+    ? (veredito.textContent = "Já pode ir tomando vergonha na cara.")
+    : "";
 
-  if (total >= 7001 && total <= 8000) {
-    veredito.textContent = "Já pode ir tomando vergonha na cara.";
-  }
+  total >= 8001 && total <= 9000
+    ? (veredito.textContent = "Não dá pra te defender.")
+    : "";
 
-  if (total >= 8001 && total <= 9000) {
-    veredito.textContent = "Não dá pra te defender.";
-  }
+  total >= 9001 && total <= 10000
+    ? (veredito.textContent = "cê acha isso bonito? te orienta")
+    : "";
 
-  if (total >= 9001 && total <= 10000) {
-    veredito.textContent = "cê acha isso bonito? te orienta";
-  }
+  total >= 10001 && total <= 11000
+    ? (veredito.textContent = "ce fei zé se endireita")
+    : "";
 
-  if (total >= 10001 && total <= 11000) {
-    veredito.textContent = "ce fei zé se endireita";
-  }
+  total >= 11001 && total <= 15000
+    ? (veredito.textContent = "Procure um advogado.")
+    : "";
 
-  if (total >= 11001 && total <= 15000) {
-    veredito.textContent = "Procure um advogado.";
-  }
-
-  if (total >= 15001) {
-    veredito.textContent = "Talvez você precise de um grupo de advogados.";
-  }
+  total >= 15001
+    ? (veredito.textContent = "Talvez você precise de um grupo de advogados.")
+    : "";
 }
 
 head.textContent = ui[0].header;
 
-resultado.textContent = comms.def;
+ch.textContent = comms.def;
 
 function get(elem) {
-  if (elem.id == "pt") {
-    head.textContent = ui[0].header;
-    butres.textContent = ui[0].results;
-    butred.textContent = ui[0].redo;
-  }
-  if (elem.id == "es") {
-    head.textContent = ui[1].header;
-    butres.textContent = ui[1].results;
-    butred.textContent = ui[1].redo;
-  }
-  if (elem.id == "en") {
-    head.textContent = ui[2].header;
-    butres.textContent = ui[2].results;
-    butred.textContent = ui[2].redo;
-  }
+  ptl.checked
+    ? ((head.textContent = ui[0].header),
+      (butres.textContent = ui[0].results),
+      (butred.textContent = ui[0].redo))
+    : "";
+
+  esl.checked
+    ? ((head.textContent = ui[1].header),
+      (butres.textContent = ui[1].results),
+      (butred.textContent = ui[1].redo))
+    : "";
+
+  enl.checked
+    ? ((head.textContent = ui[2].header),
+      (butres.textContent = ui[2].results),
+      (butred.textContent = ui[2].redo))
+    : "";
 }
 
 for (i = 0; i < redflags.length; i++) {
