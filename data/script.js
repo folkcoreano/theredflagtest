@@ -1,15 +1,16 @@
-const resultado = document.querySelector("#total");
-const veredito = document.querySelector("#ver");
-const obs = document.querySelector("#obs");
-const final = document.querySelector("#show");
-const btn = document.querySelector("#btn");
-const checkboxes = document.querySelectorAll("cb");
-const check = document.querySelector("#check");
-const item = document.querySelector(".container");
-const head = document.querySelector("#head");
-const butres = document.querySelector("#butres");
-const butred = document.querySelector("#butred");
-const ch = document.querySelector("#ch");
+var resultado = document.querySelector("#total");
+var veredito = document.querySelector("#ver");
+var obs = document.querySelector("#obs");
+var final = document.querySelector("#show");
+var btn = document.querySelector("#btn");
+var checkboxes = document.querySelectorAll("cb");
+var check = document.querySelector("#check");
+var item = document.querySelector(".container");
+var head = document.querySelector("#head");
+var foot = document.querySelector("#foot");
+var butres = document.querySelector("#butres");
+var butred = document.querySelector("#butred");
+var ch = document.querySelector("#ch");
 
 var ptl = document.querySelector("#pt");
 var esl = document.querySelector("#es");
@@ -19,28 +20,26 @@ const ui = [
   {
     header:
       "Um teste nada sério que mede o quão questionável podem ser suas ações!",
-    footer: `<div class="box-a" id="pe">
-      desenvolvido por
-      <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na
-      infame lista de redflags de
-      <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.
-    </div>`,
+    footer: `desenvolvido por <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na infame lista de redflags de <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.`,
     results: "mostrar resultado",
     redo: "refazer",
+    unchecked: "Parabéns! Você não marcou nada.",
   },
   {
     header:
       "¡Una prueba no tan seria que mide qué tan cuestionables pueden ser tus acciones!",
-    footer: "",
+    footer: `desarrollado por <a href="https://twitter.com/folkcoreano">@folkcoreano</a> y basado en la infame lista de redflags de <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.`,
     results: "mostrar resultado",
     redo: "rehacer",
+    unchecked: "¡Felicidades! No has marcado nada.",
   },
   {
     header:
       "A not-so-serious test that measures how questionable your actions can be!",
-    footer: "",
+    footer: `developed by <a href="https://twitter.com/folkcoreano">@folkcoreano</a> and based on <a href="https://twitter.com/rafdaaa">@rafdaaa</a>'s infamous redflag list.`,
     results: "show results",
     redo: "redo",
+    unchecked: "Congratulations! You haven't checked anything.",
   },
 ];
 
@@ -419,12 +418,6 @@ const redflags = [
   },
 ];
 
-const comms = {
-  def: "Parabéns! Você não marcou nada.",
-  def_es: "¡Felicidades! No has marcado nada.",
-  def_en: "Congratulations! You haven't checked anything.",
-};
-
 function show() {
   final.style.display = "block";
   btn.style.display = "none";
@@ -450,7 +443,7 @@ function UC(elem) {
 
   check.textContent = `Você marcou ${chebox.length} de ${allbox.length} items da lista.`;
 
-  total == 0 ? (ch.textContent = comms.def) : (ch.textContent = "");
+  total == 0 ? (ch.textContent = ui[0].unchecked) : (ch.textContent = "");
 
   resultado.textContent = `${total.toFixed(0)} pontos.`;
 
@@ -515,26 +508,24 @@ function UC(elem) {
 
 head.textContent = ui[0].header;
 
-ch.textContent = comms.def;
+ch.textContent = ui[0].unchecked;
+
+foot.innerHTML = ui[0].footer;
+
+x = 0;
 
 function get(elem) {
-  ptl.checked
-    ? ((head.textContent = ui[0].header),
-      (butres.textContent = ui[0].results),
-      (butred.textContent = ui[0].redo))
-    : "";
+  ptl.checked ? (x = 0) : "";
 
-  esl.checked
-    ? ((head.textContent = ui[1].header),
-      (butres.textContent = ui[1].results),
-      (butred.textContent = ui[1].redo))
-    : "";
+  esl.checked ? (x = 1) : "";
 
-  enl.checked
-    ? ((head.textContent = ui[2].header),
-      (butres.textContent = ui[2].results),
-      (butred.textContent = ui[2].redo))
-    : "";
+  enl.checked ? (x = 2) : "";
+
+  head.textContent = ui[x].header;
+  foot.innerHTML = ui[x].footer;
+  butres.textContent = ui[x].results;
+  butred.textContent = ui[x].redo;
+  ch.textContent = ui[x].unchecked;
 }
 
 for (i = 0; i < redflags.length; i++) {
