@@ -505,14 +505,13 @@ function UC(elem) {
     ? (veredito.textContent = "Talvez você precise de um grupo de advogados.")
     : "";
 }
-
-head.textContent = ui[0].header;
-
-ch.textContent = ui[0].unchecked;
-
-foot.innerHTML = ui[0].footer;
-
 x = 0;
+
+head.textContent = ui[x].header;
+
+ch.textContent = ui[x].unchecked;
+
+foot.innerHTML = ui[x].footer;
 
 function get(elem) {
   ptl.checked ? (x = 0) : "";
