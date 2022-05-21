@@ -11,7 +11,6 @@ var foot = document.querySelector("#foot");
 var butres = document.querySelector("#butres");
 var butred = document.querySelector("#butred");
 var ch = document.querySelector("#ch");
-
 var ptl = document.querySelector("#pt");
 var esl = document.querySelector("#es");
 var enl = document.querySelector("#en");
@@ -423,7 +422,7 @@ function show() {
   btn.style.display = "none";
 }
 
-var total = 0;
+total = 0;
 
 function UC(elem) {
   if (elem.checked == true) {
@@ -526,7 +525,6 @@ function get(elem) {
   butred.textContent = ui[x].redo;
   ch.textContent = ui[x].unchecked;
 }
-
 for (i = 0; i < redflags.length; i++) {
   item.innerHTML += `<label><input class="cb select" type="checkbox" id="${redflags[i].id}" value="${redflags[i].valor}" onclick="UC(this)">${redflags[i].flag}</label><br />`;
 }
