@@ -433,11 +433,13 @@ function UC(elem) {
 
   total == 0 ? (ch.textContent = ui[0].unchecked) : (ch.textContent = "");
 
+  chebox.length == 0 ? ((check.style.display = "none"), (resultado.style.display = "none")) : ((check.style.display = "block"), (resultado.style.display = "block"))
+
   resultado.textContent = `${total.toFixed(0)} pontos.`;
 
   elem.checked ? "" : (veredito.textContent = "");
 
-  total > 1 && total < 500
+  total > 1 && total <= 500
     ? (veredito.textContent = "Você é apenas meio bobo.")
     : "";
 
@@ -512,6 +514,11 @@ function get(elem) {
   butred.textContent = ui[x].redo;
   ch.textContent = ui[x].unchecked;
 }
-for (i = 0; i < redflags.length; i++) {
+
+i = 0
+n = redflags.length
+
+while (i < n) {
   item.innerHTML += `<label><input class="cb select" type="checkbox" id="${redflags[i].id}" value="${redflags[i].valor}" onclick="UC(this)">${redflags[i].flag}</label><br />`;
+  i++
 }
