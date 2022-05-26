@@ -447,20 +447,26 @@ const redflags = [
 const weeken = [
   {
     flag: "skipped 9th",
+    valor: "0500",
+    id: ""
   },
   {
     flag: "complains about people who skipped 1-8 docs",
+    valor: "0600",
+    id: ""
   }
 ];
 
 const weekpt = [
   {
     flag: "pulou 9th",
-    valor: "0500"
+    valor: "0500",
+    id: ""
   },
   {
     flag: "reclama de quem pulou a série clássica",
-    valor: "0600"
+    valor: "0600",
+    id: ""
   }
 ];
 
@@ -468,6 +474,8 @@ x = 0;
 head.textContent = ui[x].header;
 ch.textContent = ui[x].unchecked;
 foot.innerHTML = ui[x].footer;
+
+var lang = redflags;
 
 ptl.addEventListener('click', () => {
   x = 0
@@ -499,9 +507,9 @@ function UC(elem) {
     total -= Number(elem.value);
   }
 
-  ptl.checked ? (x = 0) : "";
+  ptl.checked ? (x = 0, lang = weekpt) : "";
 
-  enl.checked ? (x = 1) : "";
+  enl.checked ? (x = 1, lang = weeken) : "";
 
   head.textContent = ui[x].header;
   foot.innerHTML = ui[x].footer;
@@ -583,8 +591,6 @@ function UC(elem) {
     ? (veredito.textContent = ui[x].outputn)
     : "";
 }
-
-lang = redflags
 
 i = 0
 n = lang.length
