@@ -21,7 +21,26 @@ const ui = [
     footer: `desenvolvido por <a href="https://twitter.com/folkcoreano">@folkcoreano</a> e baseado na infame lista de redflags de <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.`,
     results: "mostrar resultado",
     redo: "refazer",
+    points: "pontos",
     unchecked: "Parabéns! Você não marcou nada.",
+    outputa: "Você é apenas meio bobo.",
+    outputb: "Não se preocupe, poderia ser pior!",
+    outputc: "Dá pra resolver, ainda há tempo.",
+    outputd: "Não é tão ruim assim, vai.",
+    outpute: "Preocupante mas nem tanto!",
+    outputf: "Tem que ver isso aí, hein...",
+    outputg: "Quase uma ameaça.",
+    outputh: "Tu é meio esquisito...",
+    outputi: "Já pode ir tomando vergonha na cara.",
+    outputj: "Não dá pra te defender.",
+    outputk: "cê acha isso bonito? te orienta",
+    outputl: "ce fei zé se endireita",
+    outputm: "Procure um advogado.",
+    outputn: "Talvez você precise de um grupo de advogados.",
+    outputaa: "nunca viu um peitinho, né?",
+    m1: "Você marcou",
+    m2: "de",
+    m3: "items da lista.",
   },
   {
     header:
@@ -29,7 +48,26 @@ const ui = [
     footer: `developed by <a href="https://twitter.com/folkcoreano">@folkcoreano</a> and based on <a href="https://twitter.com/rafdaaa">@rafdaaa</a>'s infamous redflag list.`,
     results: "show results",
     redo: "redo",
+    points: "points",
     unchecked: "Congratulations! You haven't checked anything.",
+    outputa: "You are just a little silly.",
+    outputb: "Don't worry, it could have been worse!",
+    outputc: "There's hope, don't give up!",
+    outputd: "Well, it's not THAT bad...",
+    outpute: "Be afraid.",
+    outputf: "Welp...",
+    outputg: "Almost a threat.",
+    outputh: "You are kind of weird ... ",
+    outputi: "Be ashamed.",
+    outputj: "You have to explain yourself.",
+    outputk: "Seek help.",
+    outputl: "SEEK HELP NOW!",
+    outputm: "Look for a lawyer. ",
+    outputn: "You may need a group of lawyers. ",
+    outputaa: "also, no maidens?",
+    m1: "You checked",
+    m2: "out of",
+    m3: "items in the list.",
   },
 ];
 
@@ -406,6 +444,47 @@ const redflags = [
   },
 ];
 
+const weeken = [
+  {
+    flag: "skipped 9th",
+  },
+  {
+    flag: "complains about people who skipped 1-8 docs",
+  }
+];
+
+const weekpt = [
+  {
+    flag: "pulou 9th",
+    valor: "0500"
+  },
+  {
+    flag: "reclama de quem pulou a série clássica",
+    valor: "0600"
+  }
+];
+
+x = 0;
+head.textContent = ui[x].header;
+ch.textContent = ui[x].unchecked;
+foot.innerHTML = ui[x].footer;
+
+ptl.addEventListener('click', () => {
+  x = 0
+  head.textContent = ui[x].header;
+  foot.innerHTML = ui[x].footer;
+  butres.textContent = ui[x].results;
+  butred.textContent = ui[x].redo;
+});
+
+enl.addEventListener('click', () => {
+  x = 1
+  head.textContent = ui[x].header;
+  foot.innerHTML = ui[x].footer;
+  butres.textContent = ui[x].results;
+  butred.textContent = ui[x].redo;
+});
+
 function show() {
   final.style.display = "block";
   btn.style.display = "none";
@@ -420,90 +499,6 @@ function UC(elem) {
     total -= Number(elem.value);
   }
 
-  const allbox = document.querySelectorAll('input[type="checkbox"]');
-  const chebox = document.querySelectorAll('input[type="checkbox"]:checked');
-
-  const face = document.querySelector("#fb");
-
-  face.checked
-    ? (obs.textContent = "nunca viu um peitinho, né?")
-    : (obs.textContent = "");
-
-  check.textContent = `Você marcou ${chebox.length} de ${allbox.length} items da lista.`;
-
-  total == 0 ? (ch.textContent = ui[0].unchecked) : (ch.textContent = "");
-
-  chebox.length == 0 ? ((check.style.display = "none"), (resultado.style.display = "none")) : ((check.style.display = "block"), (resultado.style.display = "block"))
-
-  resultado.textContent = `${total.toFixed(0)} pontos.`;
-
-  elem.checked ? "" : (veredito.textContent = "");
-
-  total > 1 && total <= 500
-    ? (veredito.textContent = "Você é apenas meio bobo.")
-    : "";
-
-  total >= 501 && total <= 1000
-    ? (veredito.textContent = "Não se preocupe, poderia ser pior!")
-    : "";
-
-  total >= 1001 && total <= 2000
-    ? (veredito.textContent = "Dá pra resolver, ainda há tempo.")
-    : "";
-
-  total >= 2001 && total <= 3000
-    ? (veredito.textContent = "Não é tão ruim assim, vai.")
-    : "";
-
-  total >= 3001 && total <= 4000
-    ? (veredito.textContent = "Preocupante mas nem tanto!")
-    : "";
-
-  total >= 4001 && total <= 5000
-    ? (veredito.textContent = "Tem que ver isso aí, hein...")
-    : "";
-
-  total >= 5001 && total <= 6000
-    ? (veredito.textContent = "Quase uma ameaça.")
-    : "";
-
-  total >= 6001 && total <= 7000
-    ? (veredito.textContent = "Tu é meio esquisito...")
-    : "";
-
-  total >= 7001 && total <= 8000
-    ? (veredito.textContent = "Já pode ir tomando vergonha na cara.")
-    : "";
-
-  total >= 8001 && total <= 9000
-    ? (veredito.textContent = "Não dá pra te defender.")
-    : "";
-
-  total >= 9001 && total <= 10000
-    ? (veredito.textContent = "cê acha isso bonito? te orienta")
-    : "";
-
-  total >= 10001 && total <= 11000
-    ? (veredito.textContent = "ce fei zé se endireita")
-    : "";
-
-  total >= 11001 && total <= 15000
-    ? (veredito.textContent = "Procure um advogado.")
-    : "";
-
-  total >= 15001
-    ? (veredito.textContent = "Talvez você precise de um grupo de advogados.")
-    : "";
-}
-x = 0;
-
-head.textContent = ui[x].header;
-
-ch.textContent = ui[x].unchecked;
-
-foot.innerHTML = ui[x].footer;
-
-function get(elem) {
   ptl.checked ? (x = 0) : "";
 
   enl.checked ? (x = 1) : "";
@@ -512,13 +507,89 @@ function get(elem) {
   foot.innerHTML = ui[x].footer;
   butres.textContent = ui[x].results;
   butred.textContent = ui[x].redo;
-  ch.textContent = ui[x].unchecked;
+
+  const allbox = document.querySelectorAll('input[type="checkbox"]');
+  const chebox = document.querySelectorAll('input[type="checkbox"]:checked');
+
+  const face = document.querySelector("#fb");
+
+  face.checked
+    ? (obs.textContent = ui[x].outputaa)
+    : (obs.textContent = "");
+
+  check.textContent = `${ui[x].m1} ${chebox.length} ${ui[x].m2} ${allbox.length} ${ui[x].m3}`;
+
+  total == 0 ? (ch.textContent = ui[x].unchecked) : (ch.textContent = "");
+
+  chebox.length == 0 ? ((check.style.display = "none"), (resultado.style.display = "none")) : ((check.style.display = "block"), (resultado.style.display = "block"))
+
+  resultado.textContent = `${total.toFixed(0)} ${ui[x].points}`;
+
+  elem.checked ? "" : (veredito.textContent = "");
+
+  total > 1 && total <= 500
+    ? (veredito.textContent = ui[x].outputa)
+    : "";
+
+  total >= 501 && total <= 1000
+    ? (veredito.textContent = ui[x].outputb)
+    : "";
+
+  total >= 1001 && total <= 2000
+    ? (veredito.textContent = ui[x].outputc)
+    : "";
+
+  total >= 2001 && total <= 3000
+    ? (veredito.textContent = ui[x].outputd)
+    : "";
+
+  total >= 3001 && total <= 4000
+    ? (veredito.textContent = ui[x].outpute)
+    : "";
+
+  total >= 4001 && total <= 5000
+    ? (veredito.textContent = ui[x].outputf)
+    : "";
+
+  total >= 5001 && total <= 6000
+    ? (veredito.textContent = ui[x].outputg)
+    : "";
+
+  total >= 6001 && total <= 7000
+    ? (veredito.textContent = ui[x].outputh)
+    : "";
+
+  total >= 7001 && total <= 8000
+    ? (veredito.textContent = ui[x].outputi)
+    : "";
+
+  total >= 8001 && total <= 9000
+    ? (veredito.textContent = ui[x].outputj)
+    : "";
+
+  total >= 9001 && total <= 10000
+    ? (veredito.textContent = ui[x].outputk)
+    : "";
+
+  total >= 10001 && total <= 11000
+    ? (veredito.textContent = ui[x].outputl)
+    : "";
+
+  total >= 11001 && total <= 15000
+    ? (veredito.textContent = ui[x].outputm)
+    : "";
+
+  total >= 15001
+    ? (veredito.textContent = ui[x].outputn)
+    : "";
 }
 
+lang = redflags
+
 i = 0
-n = redflags.length
+n = lang.length
 
 while (i < n) {
-  item.innerHTML += `<label><input class="cb select" type="checkbox" id="${redflags[i].id}" value="${redflags[i].valor}" onclick="UC(this)">${redflags[i].flag}</label><br />`;
+  item.innerHTML += `<label><input class="cb select" type="checkbox" id="${lang[i].id}" value="${lang[i].valor}" onclick="UC(this)">${lang[i].flag}</label><br />`;
   i++
 }
