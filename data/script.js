@@ -1,19 +1,18 @@
-var resultado = document.querySelector("#total");
-var veredito = document.querySelector("#ver");
-var obs = document.querySelector("#obs");
-var final = document.querySelector("#show");
-var btn = document.querySelector("#btn");
-var checkboxes = document.querySelectorAll("cb");
-var check = document.querySelector("#check");
-var item = document.querySelector(".container");
-var head = document.querySelector("#head");
-var foot = document.querySelector("#foot");
-var butres = document.querySelector("#butres");
-var butred = document.querySelector("#butred");
-var ch = document.querySelector("#ch");
-var ptl = document.querySelector("#pt");
-var esl = document.querySelector("#es");
-var enl = document.querySelector("#en");
+const resultado = document.querySelector("#total");
+const veredito = document.querySelector("#ver");
+const obs = document.querySelector("#obs");
+const final = document.querySelector("#show");
+const btn = document.querySelector("#btn");
+const checkboxes = document.querySelectorAll("cb");
+const check = document.querySelector("#check");
+const item = document.querySelector(".container");
+const head = document.querySelector("#head");
+const foot = document.querySelector("#foot");
+const butres = document.querySelector("#butres");
+const butred = document.querySelector("#butred");
+const ch = document.querySelector("#ch");
+const ptl = document.querySelector("#pt");
+const enl = document.querySelector("#en");
 
 const ui = [
   {
@@ -23,14 +22,6 @@ const ui = [
     results: "mostrar resultado",
     redo: "refazer",
     unchecked: "Parabéns! Você não marcou nada.",
-  },
-  {
-    header:
-      "¡Una prueba no tan seria que mide qué tan cuestionables pueden ser tus acciones!",
-    footer: `desarrollado por <a href="https://twitter.com/folkcoreano">@folkcoreano</a> y basado en la infame lista de redflags de <a href="https://twitter.com/rafdaaa">@rafdaaa</a>.`,
-    results: "mostrar resultado",
-    redo: "rehacer",
-    unchecked: "¡Felicidades! No has marcado nada.",
   },
   {
     header:
@@ -45,13 +36,11 @@ const ui = [
 const redflags = [
   {
     flag: "se identifica com o ryan gosling",
-    flag_en: "identifies with ryan gosling",
     valor: "0200",
     id: "rg",
   },
   {
     flag: "não gosta de gatos",
-    flag_en: "doesn't like cats",
     valor: "0150",
     id: "",
   },
@@ -515,9 +504,7 @@ foot.innerHTML = ui[x].footer;
 function get(elem) {
   ptl.checked ? (x = 0) : "";
 
-  esl.checked ? (x = 1) : "";
-
-  enl.checked ? (x = 2) : "";
+  enl.checked ? (x = 1) : "";
 
   head.textContent = ui[x].header;
   foot.innerHTML = ui[x].footer;
