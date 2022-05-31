@@ -80,6 +80,7 @@ a {
   text-decoration: none;
   border-radius: 7px;
   padding: 2px;
+  color: black;
 }
 
 a:visited {
